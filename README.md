@@ -7,7 +7,7 @@ Built with **Next.js 14**, **React Leaflet**, and **Tailwind CSS**, the app prov
 
 ## 🚀 Live Demo
 
-🔗 [View Live on Vercel](https://your-vercel-deployment-link.vercel.app)
+🔗 [View Live on Vercel](https://v0-earthquake-visualizer.vercel.app/)
 
 ---
 
