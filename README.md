@@ -1,30 +1,57 @@
-# Earthquake Visualizer
+# 🌍 Earthquake Visualizer
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+A **modern, eco-conscious web application** that visualizes real-time global earthquake activity using the **USGS Earthquake API**.  
+Built with **Next.js 14**, **React Leaflet**, and **Tailwind CSS**, the app provides an intuitive, data-driven experience for students, researchers, and anyone curious about Earth's seismic activity.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/abhijaiswal2503-gmailcoms-projects/v0-earthquake-visualizer)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/lMIxQKoo416)
+---
 
-## Overview
+## 🚀 Live Demo
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+🔗 [View Live on Vercel](https://your-vercel-deployment-link.vercel.app)
 
-## Deployment
+---
 
-Your project is live at:
+## 🧭 Introduction
 
-**[https://vercel.com/abhijaiswal2503-gmailcoms-projects/v0-earthquake-visualizer](https://vercel.com/abhijaiswal2503-gmailcoms-projects/v0-earthquake-visualizer)**
+**Earthquake Visualizer** is an interactive map-based platform designed to make seismic data understandable and engaging.  
+It fetches **live earthquake data** from the USGS Earthquake API and presents it on an interactive map, with filters for magnitude, time period, and location.
 
-## Build your app
+The project was developed to promote **environmental awareness** through a clean, eco-conscious interface that’s optimized for accessibility and performance.
 
-Continue building your app on:
+---
 
-**[https://v0.app/chat/lMIxQKoo416](https://v0.app/chat/lMIxQKoo416)**
+## ✨ Features
 
-## How It Works
+- 🌐 **Real-Time Data Integration** – Fetches live earthquake updates from the USGS feed  
+- 🗺️ **Interactive Map** – Zoom, pan, and click markers to explore global earthquakes  
+- 🎨 **Color-Coded Magnitudes** – Visual cues for earthquake intensity  
+- 🔍 **Filtering Controls** – Filter by time period, magnitude, and location search  
+- ♻️ **Eco-Themed UI** – Earth tones, clean typography, and accessible contrast  
+- ⚡ **Performance Optimized** – Lazy loading, dynamic imports, and memoization  
+- 🧭 **Responsive & Accessible** – Works beautifully on mobile and desktop  
+- 🌙 **Dark Mode Support** – Built-in theme toggle for better user comfort  
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+---
+
+## 🧩 Tech Stack
+
+| Layer | Technology |
+|-------|-------------|
+| **Framework** | Next.js 14 (App Router) |
+| **Frontend** | React 18, TypeScript |
+| **UI Styling** | Tailwind CSS, shadcn/ui |
+| **Map Library** | React Leaflet + Leaflet.js |
+| **Data Source** | [USGS Earthquake GeoJSON API](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) |
+| **Icons** | Lucide React |
+| **Deployment** | Vercel |
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow these steps to set up the project locally:
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/yourusername/earthquake-visualizer.git
+cd earthquake-visualizer
