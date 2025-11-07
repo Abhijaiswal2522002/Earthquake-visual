@@ -23,7 +23,7 @@ export default function Home() {
   })
 
   return (
-    <div className="flex h-screen bg-background text-foreground overflow-hidden">
+    <div className="flex h-screen bg-background text-foreground overflow-hidden flex-col md:flex-row">
       {/* Desktop Sidebar */}
       <div className="hidden md:flex md:w-80 md:flex-col md:border-r md:border-border">
         <Sidebar
@@ -41,9 +41,9 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col min-h-screen md:min-h-0">
         <Header lastUpdated={lastUpdated} />
-        <div className="flex-1 relative">
+        <div className="flex-1 relative pb-56 md:pb-0">
           <EarthquakeMap
             earthquakes={filteredEarthquakes}
             selectedEarthquake={selectedEarthquake}
@@ -66,9 +66,12 @@ export default function Home() {
         />
       )}
 
-      {/* Mobile Filter Sheet */}
+      {/* Mobile Filter Sheet with Statistics */}
       {showDetails === false && (
-        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border p-4 rounded-t-lg shadow-lg">
+        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border p-3 rounded-t-lg shadow-lg z-40 max-h-[55vh] overflow-y-auto">
+          <div className="flex justify-center mb-2">
+            <div className="w-12 h-1 bg-muted rounded-full" />
+          </div>
           <Sidebar
             minMagnitude={minMagnitude}
             setMinMagnitude={setMinMagnitude}

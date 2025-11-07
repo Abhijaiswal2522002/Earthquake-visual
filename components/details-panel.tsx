@@ -19,14 +19,14 @@ export default function DetailsPanel({ earthquake, onClose }: DetailsPanelProps)
   return (
     <>
       {/* Mobile Bottom Sheet */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border rounded-t-2xl shadow-2xl z-50 max-h-[70vh] overflow-y-auto">
-        <div className="p-4 flex items-center justify-between border-b border-border sticky top-0 bg-card">
-          <h2 className="text-lg font-semibold">Earthquake Details</h2>
-          <button onClick={onClose} className="p-1 hover:bg-secondary rounded-lg" aria-label="Close">
-            <X className="w-5 h-5" />
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border rounded-t-2xl shadow-2xl z-50 max-h-[75vh] overflow-y-auto">
+        <div className="p-3 md:p-4 flex items-center justify-between border-b border-border sticky top-0 bg-card rounded-t-2xl">
+          <h2 className="text-base md:text-lg font-semibold truncate">Earthquake Details</h2>
+          <button onClick={onClose} className="p-1 hover:bg-secondary rounded-lg flex-shrink-0" aria-label="Close">
+            <X className="w-4 h-4 md:w-5 md:h-5" />
           </button>
         </div>
-        <div className="p-4 space-y-4">
+        <div className="p-3 md:p-4 space-y-3">
           <DetailContent earthquake={earthquake} />
         </div>
       </div>
@@ -55,35 +55,37 @@ function DetailContent({ earthquake }: { earthquake: any }) {
 
   return (
     <>
-      <Card className="p-4 bg-secondary/20">
+      <Card className="p-3 md:p-4 bg-secondary/20">
         <p className="text-xs text-muted-foreground mb-1">Location</p>
-        <p className="font-semibold text-foreground">{place}</p>
+        <p className="font-semibold text-xs md:text-sm text-foreground line-clamp-2">{place}</p>
       </Card>
 
-      <Card className="p-4 bg-secondary/20">
+      <Card className="p-3 md:p-4 bg-secondary/20">
         <p className="text-xs text-muted-foreground mb-1">Magnitude</p>
-        <p className="text-3xl font-bold text-primary">{mag.toFixed(2)}</p>
+        <p className="text-2xl md:text-3xl font-bold text-primary">{mag?.toFixed(2) ?? "N/A"}</p>
       </Card>
 
-      <Card className="p-4 bg-secondary/20">
+      <Card className="p-3 md:p-4 bg-secondary/20">
         <p className="text-xs text-muted-foreground mb-1">Depth</p>
-        <p className="text-lg font-semibold text-foreground">{depth.toFixed(1)} km</p>
+        <p className="text-base md:text-lg font-semibold text-foreground">{depth?.toFixed(1) ?? "N/A"} km</p>
       </Card>
 
-      <Card className="p-4 bg-secondary/20">
+      <Card className="p-3 md:p-4 bg-secondary/20">
         <p className="text-xs text-muted-foreground mb-1">Coordinates</p>
-        <p className="text-sm font-mono text-foreground">
+        <p className="text-xs md:text-sm font-mono text-foreground break-all">
           {lat.toFixed(4)}, {lng.toFixed(4)}
         </p>
       </Card>
 
-      <Card className="p-4 bg-secondary/20">
+      <Card className="p-3 md:p-4 bg-secondary/20">
         <p className="text-xs text-muted-foreground mb-1">Time (UTC)</p>
-        <p className="text-sm text-foreground">{timeObj.toLocaleString()}</p>
+        <p className="text-xs md:text-sm text-foreground">{timeObj.toLocaleString()}</p>
       </Card>
 
       <a href={url} target="_blank" rel="noopener noreferrer" className="block w-full">
-        <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">View on USGS</Button>
+        <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-xs md:text-sm py-1.5 md:py-2 h-auto">
+          View on USGS
+        </Button>
       </a>
     </>
   )
